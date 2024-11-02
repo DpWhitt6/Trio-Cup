@@ -1,0 +1,61 @@
+/* Google fonts import*/
+@import url('https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/*TASK: search for desired fonts*/
+
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Generic Styles*/
+body {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    /* Generic project styles */
+    background-color: black;
+    font-family: 'Cambay', sans-serif;
+    width: 100%;
+    color: white;
+}
+
+h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 185px;
+    flex-wrap: wrap;
+}
+
+section{
+    height: 85%;
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#three-cups {
+    /*border: ;*/
+    background-color: white;
+    padding-top: 60px;
+    padding-bottom: 50px;
+
+}
+
+button{
+    position: relative;
+    padding: 10px;
+}
+
+.score-area{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+
+}
