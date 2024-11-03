@@ -64,7 +64,7 @@ button{
     padding: 10px;
 }
 
-.btn-one:hover , .btn-two:hover, .btn-three:hover{
+#btn-one:hover,#btn-two:hover,#btn-three:hover{
     background-color: red;
     font: bolder;
     color: white;
