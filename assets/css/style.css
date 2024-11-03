@@ -14,7 +14,6 @@ body {
     min-height: auto;
     display: flex;
     flex-direction: column;
-    /* Generic project styles */
     background-color: black;
     font-family: 'Cambay', sans-serif;
     width: 100%;
@@ -48,10 +47,18 @@ section{
     height: auto;
     padding-bottom: 25px;
     border-top: white;
+    border-bottom: white;
+}
+
+#submit{
+    background-color: white;
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    border-top: white;
 }
 
 #three-cups {
-    /*border: ;*/
     background-color: white;
     padding-top: 60px;
     padding-bottom: 25px;
@@ -64,12 +71,11 @@ button{
     padding: 10px;
 }
 
-#btn-one:hover,#btn-two:hover,#btn-three:hover{
+#btn-one:hover,#btn-two:hover,#btn-three:hover,#btn-Submit:hover{
     background-color: red;
     font: bolder;
     color: white;
 }
-
 
 .score-area{
     display: flex;
