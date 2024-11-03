@@ -28,30 +28,48 @@ h1{
     font-size: 185px;
     flex-wrap: wrap;
 }
+em{
+    color: red;
+}
 
 section{
-    height: 85%;
     display: block;
     margin-left: 10%;
     margin-right: 10%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
+    border: solid red;
+}
+
+#buttons{
+    background-color: white;
+    height: auto;
+    padding-bottom: 25px;
+    border-top: white;
 }
 
 #three-cups {
     /*border: ;*/
     background-color: white;
     padding-top: 60px;
-    padding-bottom: 50px;
-
+    padding-bottom: 25px;
+    height: 85%;
+    border-bottom: white;
 }
 
 button{
     position: relative;
     padding: 10px;
 }
+
+.btn-one:hover , .btn-two:hover, .btn-three:hover{
+    background-color: red;
+    font: bolder;
+    color: white;
+}
+
 
 .score-area{
     display: flex;
