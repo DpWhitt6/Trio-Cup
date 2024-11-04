@@ -42,7 +42,7 @@ section{
     border: solid red;
 }
 
-#buttons{
+#selectionArea{
     background-color: white;
     height: auto;
     padding-bottom: 25px;
@@ -76,6 +76,7 @@ button{
     font: bolder;
     color: white;
 }
+
 #btn-one:focus, #btn-two:focus, #btn-three:focus{
     background-color: red;
     font: bolder;
