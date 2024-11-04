@@ -1,6 +1,7 @@
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
 
+var userChoice = null;
 
 document.addEventListener('DOMContentLoaded',function() {
     let buttons = document.getElementsByTagName('button');
@@ -10,6 +11,8 @@ document.addEventListener('DOMContentLoaded',function() {
             if (this.getAttribute('data-type') === 'submit') {
                 alert ('You Clicked Submit!');
                 runGame()
+            } else if (this.getAttribute('data-type')==='cupChoice'){
+              userChoice = button.value;
             } 
         })
     }
@@ -20,48 +23,36 @@ document.addEventListener('DOMContentLoaded',function() {
  * and after the user's answer has been processed
  */
 
+/** User Choice variable needed */
+
 //Functions
 function runGame() {
+  if (userChoice === null){
+    alert('No cup selected, please select a cup!')
+    return;
+  }
 
-//Array
+//Array - Maybe need to add value of each BTN here rather than HTML -Potentially under picked cup if cup1 click then ===0 etc..
   let cupNumbers = [0,1,2];
 
 //choose winning cup
     let winningCup = Math.floor(Math.random()*cupNumbers.length);
-    console.log(winningCup,cupNumbers[winningCup]);
-    compareNumber();
-
-//Picked Cup 
-   let pickedCup = document.getElementsByClassName('Btn');
-
-   //To identify the active cup
-   for (let i= 0; i < BigInt.length; i++){
-     Btn[i].addEventListener('click',function() {
-        let current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
-          });
-
-    // Once active cup is defined get value - New Let to replace picked cup? 
-    }
-}
+    console.log(winningCup,cupNumbers[winningCup]); // Could one element = cup number and if the same then winner else loser
+    compareNumber(winningCup)
+} 
 
 
-
-function compareNumber() {
-  //Button Selected - Pick Cup not defined - error message - replace with new Let?
-  if (pickedCup.value === winningCup.value){
-    outcome();
+function compareNumber(winningCup) {
+  console.log('userChoice', typeof userChoice);
+  console.log('winningCup', typeof winningCup);
+  if (userChoice == winningCup) {
     incrementScore();
-    alert('You Won');
+    alert('You Won')
   } else {
     alert('Loser');
     incrementWrongScore();
   }
     
-}
-
-function outcome() {
 }
 
 function incrementScore() {
@@ -70,6 +61,8 @@ function incrementScore() {
 }
 
 function incrementWrongScore() {
-    let oldScore = parseInt(document.getElementById("incorrect").innerText);
-    document.getElementById("incorrect").innerText = ++oldScore;
+  let oldScore = parseInt(document.getElementById("incorrect").innerText);
+  document.getElementById("incorrect").innerText = ++oldScore;
 }
+
+// reset-game/ choices function
