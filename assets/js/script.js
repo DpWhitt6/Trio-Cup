@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded',function() {
             } 
         })
     }
-
-    //runGame() TBC 
 })
 
 /**
@@ -25,26 +23,33 @@ document.addEventListener('DOMContentLoaded',function() {
 //Functions
 function runGame() {
 
-//eventlistener for selection 
-    let pickedCup = document.getElementsByClassName ('pickMeButton');
-    for(let pickMeButton of pickedCup) {
-    pickedCup.addEventListener('click',function(){
-            if (this.getAttribute('data-type') === 'cupOne') {
-                document.getElementById(btn-one.value);
-                console.log(pickedCup);
-            }
-        })
-        }
 //Array
   let cupNumbers = [0,1,2];
 
 //choose winning cup
     let winningCup = Math.floor(Math.random()*cupNumbers.length);
     console.log(winningCup,cupNumbers[winningCup]);
+    compareNumber();
+
+//Picked Cup 
+   let pickedCup = document.getElementsByClassName('Btn');
+
+   //To identify the active cup
+   for (let i= 0; i < BigInt.length; i++){
+     Btn[i].addEventListener('click',function() {
+        let current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+
+    // Once active cup is defined get value - New Let to replace picked cup? 
+    }
 }
 
+
+
 function compareNumber() {
-  //Button Selected
+  //Button Selected - Pick Cup not defined - error message - replace with new Let?
   if (pickedCup.value === winningCup.value){
     outcome();
     incrementScore();

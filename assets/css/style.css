@@ -71,13 +71,13 @@ button{
     padding: 10px;
 }
 
-#btn-one:hover,#btn-two:hover,#btn-three:hover,#btn-Submit:hover{
+.Btn:hover:hover,#btn-Submit:hover{
     background-color: red;
     font: bolder;
     color: white;
 }
 
-#btn-one:focus, #btn-two:focus, #btn-three:focus{
+.Btn.focus{
     background-color: red;
     font: bolder;
     color: white;
