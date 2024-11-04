@@ -6,3 +6,28 @@ document.addEventListener('DOMContentLoaded',function(){
 
 })
 
+//Functions
+function runGame() {
+
+}
+
+function compareNumber() {
+
+}
+
+function outcome() {
+
+}
+
+function incrementScore() {
+
+}
+
+function incrementWrongScore() {
+
+}
+
+//unsure if needed 
+function question(){
+
+}
