@@ -66,3 +66,13 @@ function incrementWrongScore() {
 }
 
 // reset-game/ choices function
+
+/**
+ * Add reset game function 
+ * Add reset choice function (after every submit users choice becomes null again)
+ * Add game functions for best of 5, 7 unlimited 
+ * Add Score Board 
+ * Add Enter game screen with user form entry 
+ * All screens to be apart of a singular HTML file 
+ * Add game over screen
+ */
