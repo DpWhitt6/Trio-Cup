@@ -76,6 +76,11 @@ button{
     font: bolder;
     color: white;
 }
+#btn-one:focus, #btn-two:focus, #btn-three:focus{
+    background-color: red;
+    font: bolder;
+    color: white;
+}
 
 .score-area{
     display: flex;
