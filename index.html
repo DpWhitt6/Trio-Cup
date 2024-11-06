@@ -27,17 +27,20 @@
             <p> Please enter your details below: </p> 
         </div>
         <div>
-            <form action="" method="" id="formInputs">
-                <label for="first-name">First Name</label>
-                <input type="text" name="first-name" data-type="firstName" class="text-input" required>
-                <br>
-                <label for="last-name">Last Name</label>
-                <input type="text" name="last-name" data-type="lastName" class="text-input" required>
-                <br>
-                <label for="username">Username</label>
-                <input type="text" name="username" data-type="username" class="text-input" required>
-                <br>
-                <button data-type="submitWelcome" id="btn-Submit"> Submit</button>
+            <form id="login-form" method="POST" action="/login/">
+                <div class="firstName">
+                  <label for="first-name">First Name</label>
+                 <input type="text" name="first-name" id="firstName" class="text-input" required>
+                </div>
+                <div class="lastName">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" name="last-name" id="lastName" class="text-input" required>
+                </div>
+                <div class="username">
+                  <label for="username">Username</label>
+                  <input type="text" name="username" id="username" class="text-input" required>
+                </div>
+                <button type="submit" id="btn-Submit"> Submit</button>
             </form>
         </div>
         

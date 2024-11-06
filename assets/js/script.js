@@ -2,10 +2,6 @@
 // Get the button elements and add event listeners to them
 
 var userChoice = null;
-var firstName = null;
-var lastName =null;
-var username = null;
-
 
 
 document.addEventListener('DOMContentLoaded',function() {
@@ -13,23 +9,38 @@ document.addEventListener('DOMContentLoaded',function() {
 
     for (let button of buttons) {
         button.addEventListener('click', function(){
-          if (this.getAttribute('data-type')=== 'submitWelcome') {
-              welcomePage()
+          if (this.getAttribute('type')=== 'submitWelcome') {
+            handleSubmit();
           } else if (this.getAttribute('data-type') === 'submit') {
                 alert ('You Clicked Submit!');
                 runGame()
             } else if (this.getAttribute('data-type')==='cupChoice'){
               userChoice = button.value;
-            } 
-        })
-    }
+          } 
+       })
+  }
 })
 
 // Welcome Page 
+function handleSubmit(event) {
+  // Prevent the default submit action (more on this in a couple units)
+  event.preventDefault();
+      let firstName = document.getElementById('firstName');
+      let lastName = document.getElementById('lastName');
+      let username = document.getElementById('username');
 
-function welcomePage(buttons) {
-  
+    // Log their values to the console
+    console.log('FN:', firstName.value);
+    console.log('LN:', lastName.value);
+    console.log('US:', username.value);
 }
+
+let form = document.getElementById('login-form');
+form.addEventListener('submit', handleSubmit);
+
+function welcomePage(buttons) { 
+}
+
 
 //function welcomePage(formData){}
 
