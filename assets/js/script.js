@@ -2,13 +2,20 @@
 // Get the button elements and add event listeners to them
 
 var userChoice = null;
+var firstName = null;
+var lastName =null;
+var username = null;
+
+
 
 document.addEventListener('DOMContentLoaded',function() {
     let buttons = document.getElementsByTagName('button');
 
     for (let button of buttons) {
         button.addEventListener('click', function(){
-            if (this.getAttribute('data-type') === 'submit') {
+          if (this.getAttribute('data-type')=== 'submitWelcome') {
+              welcomePage()
+          } else if (this.getAttribute('data-type') === 'submit') {
                 alert ('You Clicked Submit!');
                 runGame()
             } else if (this.getAttribute('data-type')==='cupChoice'){
@@ -17,6 +24,14 @@ document.addEventListener('DOMContentLoaded',function() {
         })
     }
 })
+
+// Welcome Page 
+
+function welcomePage(buttons) {
+  
+}
+
+//function welcomePage(formData){}
 
 /**
  * The main game "loop", called when the script is first loaded

@@ -17,7 +17,7 @@ body {
     background-color: black;
     font-family: 'Cambay', sans-serif;
     width: 100%;
-    color: white;
+    padding-bottom: 25px;
 }
 
 h1{
@@ -27,21 +27,50 @@ h1{
     font-size: 185px;
     flex-wrap: wrap;
 }
-em{
-    color: red;
+
+h2, h3{
+    font-size: 50px;
 }
 
 section{
-    display: block;
     margin-left: 10%;
     margin-right: 10%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     flex-wrap: wrap;
     border: solid red;
 }
 
+.neonText {
+    color: white;
+    text-shadow:
+      0 0 7px #fd6565,
+      0 0 10px #fd6565,
+      0 0 21px #fd6565,
+      0 0 42px rgb(190, 93, 101),
+      0 0 82px rgb(190, 93, 101),
+      0 0 92px rgb(190, 93, 101),
+      0 0 102px rgb(190, 93, 101),
+      0 0 151px rgb(190, 93, 101);
+  }
+
+.hidden{
+    display:none
+}
+
+/*Welcome Page and End of game */
+#welcome, #endGame {
+    background-color: white;
+    padding-bottom: 25px;
+    height: 85%;
+    flex-direction: column;
+    align-content: center;
+    color: red;
+    text-align: center;
+    line-height: 3;
+
+}
+
+/*Game plan Page*/
 #selectionArea{
     background-color: white;
     height: auto;
@@ -64,6 +93,8 @@ section{
     padding-bottom: 25px;
     height: 85%;
     border-bottom: white;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 button{

@@ -19,10 +19,31 @@
     <!--Main Content-->
     <main>
         <div id="header">
-            <h1>Trio  <em>Cup</em></h1>
+            <h1 class="neonText"><strong>Trio Cup</strong></h1>
         </div>
-    
-       <section id="three-cups">
+    <section id="welcome">
+        <div> 
+            <h2><strong>Welcome!</strong></h2>
+            <p> Please enter your details below: </p> 
+        </div>
+        <div>
+            <form action="" method="" id="formInputs">
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" data-type="firstName" class="text-input" required>
+                <br>
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" data-type="lastName" class="text-input" required>
+                <br>
+                <label for="username">Username</label>
+                <input type="text" name="username" data-type="username" class="text-input" required>
+                <br>
+                <button data-type="submitWelcome" id="btn-Submit"> Submit</button>
+            </form>
+        </div>
+        
+
+    </section>
+       <section id="three-cups" class="hidden">
             <div id="cup-one" class="cups">
                 <img src="assets/Images/Red-Cup-Photo3-removebg-preview.png" alt="red cup">
             </div>
@@ -36,7 +57,7 @@
 
     </section>
 
-    <section id="selectionArea">
+    <section id="selectionArea" class="hidden">
         <div class="buttonPickMe">  
             <button data-type="cupChoice" id="btn-one" class="Btn" value="0"> Cup 1</button>
         </div>
@@ -49,14 +70,19 @@
             <button data-type="cupChoice" id="btn-three" class="Btn" value="2"> Cup 3 </button>
         </div>
     </section>
-    <section id="submit">
+    <section id="submit" class="hidden">
             <button data-type="submit" id="btn-Submit"> Submit </button>
     </section>
 
-     <div class="score-area">
+     <div class="score-area, hidden" >
         <p class="scores"> WINS <span id="score"> 0</span></p>
         <p class="scores"> LOSSES <span id="incorrect"> 0</span></p>
     </div>
+
+    <section id="endGame" class="hidden">
+        <h3>Game Over</h3>
+        <p>Thanks for playing!</p>
+    </section>
 
     </main>
 
