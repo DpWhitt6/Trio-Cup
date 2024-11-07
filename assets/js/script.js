@@ -46,12 +46,11 @@ function openGame (handleSubmit) {
   const hideWelcome = document.getElementById('welcome');
   welcome.classList.add('hidden');
   const showGame = document.getElementById('threeCups', 'selectionArea', 'submit'
-  , 'score-area');
+  , 'scoreArea');
   threeCups.classList.remove('hidden');
   selectionArea.classList.remove('hidden');
   submit.classList.remove('hidden');
-  score-area.classList.remove('hidden');
-
+  scoreArea.classList.remove('hidden');
   console.log('I am working')
 }
 
