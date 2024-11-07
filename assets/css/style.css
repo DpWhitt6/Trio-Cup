@@ -58,7 +58,7 @@ section{
 }
 
 /*Welcome Page and End of game */
-#welcome, #endGame {
+#welcome, #endGame{
     background-color: white;
     padding-bottom: 25px;
     height: 85%;
@@ -67,7 +67,6 @@ section{
     color: red;
     text-align: center;
     line-height: 3;
-
 }
 
 /*Game plan Page*/
@@ -111,7 +110,7 @@ button{
     font: bolder;
     color: white;
 }
-
+ /*Focus not working 07/11/24*/
 .Btn.focus{
     background-color: red;
     font: bolder;

@@ -3,7 +3,6 @@
 
 var userChoice = null;
 
-
 document.addEventListener('DOMContentLoaded',function() {
     let buttons = document.getElementsByTagName('button');
 
@@ -11,10 +10,7 @@ document.addEventListener('DOMContentLoaded',function() {
         button.addEventListener('click', function(){
           if (this.getAttribute('type')=== 'submitWelcome') {
             handleSubmit();
-            openGame();
             /**
-             * Insert code to remove hidden css code in the HTML in the game section and add it to welcome page
-             * alert saying welcome "username"
              * Game length options best of 5,10 or unlimited - If 5 games player then hide all code except game over
              * add reset option to gameover - two choices reset game (back to 5/10/unlimited) or welcome page  
              */
@@ -38,21 +34,44 @@ function handleSubmit(event) {
       let firstName = document.getElementById('firstName');
       let lastName = document.getElementById('lastName');
       let username = document.getElementById('username');
+      console.log(username); //Empty return 
       openGame(handleSubmit)
 }
 
-//NEEDS REVIEWING moving a class between html items -Not working 6/11/24
+//NEEDS REVIEWING User inputted username as a welcome - Currently failing - 07/11/24 - //Welcome [object HTMLInputElement]
 function openGame (handleSubmit) {
-  const hideWelcome = document.getElementById('welcome');
-  welcome.classList.add('hidden');
-  const showGame = document.getElementById('threeCups', 'selectionArea', 'submit'
+  alert(`Welcome ${username}`);
+  const hideWelcome = document.getElementById('welcome', 'threeCups', 'selectionArea', 'submit'
   , 'scoreArea');
+  welcome.classList.add('hidden');
   threeCups.classList.remove('hidden');
   selectionArea.classList.remove('hidden');
   submit.classList.remove('hidden');
   scoreArea.classList.remove('hidden');
-  console.log('I am working')
+  gameType()
 }
+
+//Check which radio button has been hit
+function gameType (){
+    return ($('input[type=radio]:checked').value() > 0);
+    playGameType(gameType)
+}
+
+// Number of games requested - else functionincorrect to be ammended 07/11/24
+
+/**function playGameType(gameType){
+  if (gameType === '3') {
+    for (let i = 3; i < incrementScore.length; i++) {
+      gameOver()
+    }
+  } else if (gameType === '5') {
+    for (let i = 3; i < incrementScore.length; i++); {
+      gameOver();
+  } else {(gameType === 'null') 
+    runGame();
+  }
+}
+}*/
 
 /**
  * The main game "loop", called when the script is first loaded
@@ -86,7 +105,7 @@ function compareNumber(winningCup) {
     incrementScore();
     alert('You Won')
   } else {
-    alert('Loser');
+    alert('Oh no, better luck next time!');
     incrementWrongScore();
   }
     
@@ -100,6 +119,18 @@ function incrementScore() {
 function incrementWrongScore() {
   let oldScore = parseInt(document.getElementById("incorrect").innerText);
   document.getElementById("incorrect").innerText = ++oldScore;
+}
+
+function gameOver(){
+  const gameOverScreen = document.getElementById('welcome', 'threeCups', 'selectionArea', 'submit'
+  , 'scoreArea');
+  welcome.classList.add('hidden');
+  threeCups.classList.add('hidden');
+  selectionArea.classList.add('hidden');
+  submit.classList.add('hidden');
+  scoreArea.classList.add('hidden');
+  endGame.classList.remove('hidden')
+
 }
 
 // reset-game/ choices function
