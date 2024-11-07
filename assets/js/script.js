@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded',function() {
         button.addEventListener('click', function(){
           if (this.getAttribute('type')=== 'submitWelcome') {
             handleSubmit();
+            openGame();
             /**
              * Insert code to remove hidden css code in the HTML in the game section and add it to welcome page
              * alert saying welcome "username"
@@ -43,10 +44,13 @@ function handleSubmit(event) {
 //NEEDS REVIEWING moving a class between html items -Not working 6/11/24
 function openGame (handleSubmit) {
   const hideWelcome = document.getElementById('welcome');
-  element.classList.add('hidden');
-  const showGame = document.getElementById('three-cups', 'selectionArea', 'submit'
+  welcome.classList.add('hidden');
+  const showGame = document.getElementById('threeCups', 'selectionArea', 'submit'
   , 'score-area');
-  element.classList.remove('hidden');
+  threeCups.classList.remove('hidden');
+  selectionArea.classList.remove('hidden');
+  submit.classList.remove('hidden');
+  score-area.classList.remove('hidden');
 
   console.log('I am working')
 }

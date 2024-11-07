@@ -77,6 +77,8 @@ section{
     padding-bottom: 25px;
     border-top: white;
     border-bottom: white;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 #submit{
@@ -85,9 +87,11 @@ section{
     padding-top: 15px;
     padding-bottom: 25px;
     border-top: white;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-#three-cups {
+#threeCups {
     background-color: white;
     padding-top: 60px;
     padding-bottom: 25px;
@@ -114,7 +118,7 @@ button{
     color: white;
 }
 
-.score-area{
+#scoreArea{
     display: flex;
     justify-content: space-around;
     padding-top: 10px;
