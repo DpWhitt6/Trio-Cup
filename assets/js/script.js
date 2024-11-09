@@ -49,25 +49,39 @@ function openGame () {
 }
 
 //Check which radio button has been hit
-/**function gameType (){
-    return ($('input[type=radio]:checked').value() > 0);
-    playGameType(gameType)
-}*/
+function gameType (){
+  let radioBtn = (document.getElementsByClassName('radio'))
+    if (radioBtn.checked === "3"){
+      playGameType3(gameType)
+    } /**else if (document.getElementsByTagName('input[type=radio]:checked').value() == "5"){
+        playGameType5(gameType)
+    } else if 
+      (document.getElementsByTagName('input[type=radio]:checked').value() == ""){
+        playGameType(gameType)
+  }  */
+}
 
 // Number of games requested - else functionincorrect to be ammended 07/11/24
 
-/**function playGameType(gameType){
+function playGameType3(gameType){
   if (gameType === '3') {
-    for (let i = 3; i < incrementScore.length; i++) {
+    for (let i = 3; i < (incrementScore.length + incrementWrongScore); i++) {
       gameOver()
     }
-  } else if (gameType === '5') {
-    for (let i = 3; i < incrementScore.length; i++); {
-      gameOver();
-  } else {(gameType === 'null') 
-    runGame();
   }
 }
+
+/**function playGameType5(gameType){
+  if (gameType === '5') {
+    for (let i = 5; i < (incrementScore.length + incrementWrongScore); i++); {
+      gameOver();}
+  }
+}
+
+function playGameType(gameType){
+  if (gameType === 'null') {
+    runGame();
+  }
 }*/
 
 /**
