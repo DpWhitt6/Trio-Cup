@@ -31,13 +31,13 @@ form.addEventListener('submit', handleSubmit);
 function handleSubmit(event) {
   event.preventDefault();
       let username = document.getElementById('username').value;
-      console.log(username); //Empty return 
-      openGame(handleSubmit)
+      alert(`Welcome ${username}`); 
+      openGame ();
+   
+      
 }
 
-//NEEDS REVIEWING User inputted username as a welcome - Currently failing - 07/11/24 - //Welcome [object HTMLInputElement]
-function openGame (handleSubmit) {
-  alert(`Welcome ${username}`);
+function openGame () {
   const hideWelcome = document.getElementById('welcome', 'threeCups', 'selectionArea', 'submit'
   , 'scoreArea');
   welcome.classList.add('hidden');
