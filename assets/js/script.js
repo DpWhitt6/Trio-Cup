@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded',function() {
 
     for (let button of buttons) {
         button.addEventListener('click', function(){
-          if (this.getAttribute('type')=== 'submitWelcome') {
+         if (this.getAttribute('type')=== 'submitWelcome') {
             handleSubmit();
             /**
              * Game length options best of 5,10 or unlimited - If 5 games player then hide all code except game over
@@ -25,15 +25,12 @@ document.addEventListener('DOMContentLoaded',function() {
 })
 
 let form = document.getElementById('login-form');
-form.addEventListener('submit', handleSubmit); //should this element let onto openGame.. how
+form.addEventListener('submit', handleSubmit); 
 
 //Form Filled 
 function handleSubmit(event) {
-  // Prevent the default submit action (more on this in a couple units)
   event.preventDefault();
-      let firstName = document.getElementById('firstName');
-      let lastName = document.getElementById('lastName');
-      let username = document.getElementById('username');
+      let username = document.getElementById('username').value;
       console.log(username); //Empty return 
       openGame(handleSubmit)
 }
@@ -52,10 +49,10 @@ function openGame (handleSubmit) {
 }
 
 //Check which radio button has been hit
-function gameType (){
+/**function gameType (){
     return ($('input[type=radio]:checked').value() > 0);
     playGameType(gameType)
-}
+}*/
 
 // Number of games requested - else functionincorrect to be ammended 07/11/24
 

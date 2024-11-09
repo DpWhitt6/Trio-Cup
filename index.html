@@ -27,7 +27,7 @@
             <p> Please enter your details below: </p> 
         </div>
         <div>
-            <form id="login-form" method="POST" action="/login/">
+            <form id="login-form" method="POST" action="/login/" onsubmit="return handleSubmit();">
                 <div class="firstName">
                   <label for="first-name">First Name</label>
                  <input type="text" name="first-name" id="firstName" class="text-input" required>
@@ -57,7 +57,7 @@
         </div>
     </section>
 
-       <section id="threeCups" class="hidden">
+       <section id="threeCups" class="hidden"> <!--class="hidden"-->
             <div id="cup-one" class="cups">
                 <img src="assets/Images/Red-Cup-Photo3-removebg-preview.png" alt="red cup">
             </div>
@@ -71,7 +71,7 @@
 
     </section>
 
-    <section id="selectionArea" class="hidden">
+    <section id="selectionArea" class="hidden"> <!--class="hidden"-->
         <div class="buttonPickMe">  
             <button data-type="cupChoice" id="btn-one" class="Btn" value="0"> Cup 1</button>
         </div>
@@ -84,11 +84,11 @@
             <button data-type="cupChoice" id="btn-three" class="Btn" value="2"> Cup 3 </button>
         </div>
     </section>
-    <section id="submit" class="hidden">
+    <section id="submit" class="hidden"> <!--class="hidden"-->
             <button data-type="submitCup" id="btn-Submit"> Submit </button>
     </section>
 
-     <section id="scoreArea" class="hidden">
+     <section id="scoreArea" class="hidden"> <!--class="hidden"-->
         <p class="scores" > WINS <span id="score"> 0</span></p>
         <p class="scores" > LOSSES <span id="incorrect"> 0</span></p>
      </section>
