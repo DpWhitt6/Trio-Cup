@@ -34,8 +34,6 @@ function handleSubmit(event) {
       let username = document.getElementById('username').value;
       alert(`Welcome ${username}`); 
       openGame ();
-   
-      
 }
 
 function openGame () {
@@ -46,44 +44,10 @@ function openGame () {
   selectionArea.classList.remove('hidden');
   submit.classList.remove('hidden');
   scoreArea.classList.remove('hidden');
-  gameType()
-}
-
-//Check which radio button has been hit
-function gameType (){
-  let radioBtn = (document.getElementsByClassName('radio'))
-    if (radioBtn.checked === "3"){
-      playGameType3(gameType)
-    } /**else if (document.getElementsByTagName('input[type=radio]:checked').value() == "5"){
-        playGameType5(gameType)
-    } else if 
-      (document.getElementsByTagName('input[type=radio]:checked').value() == ""){
-        playGameType(gameType)
-  }  */
 }
 
 // Number of games requested - else functionincorrect to be ammended 07/11/24
 
-function playGameType3(gameType){
-  if (gameType === '3') {
-    if (let i = 3; i < userScore ; i++) {
-      gameOver()
-    }
-  }
-}
-
-/**function playGameType5(gameType){
-  if (gameType === '5') {
-    for (let i = 5; i < (incrementScore.length + incrementWrongScore); i++); {
-      gameOver();}
-  }
-}
-
-function playGameType(gameType){
-  if (gameType === 'null') {
-    runGame();
-  }
-}*/
 
 /**
  * The main game "loop", called when the script is first loaded
@@ -116,9 +80,11 @@ function compareNumber(winningCup) {
   if (userChoice == winningCup) {
     incrementScore();
     alert('You Won')
+    scoreCount();
   } else {
     alert('Oh no, better luck next time!');
     incrementWrongScore();
+    scoreCount();
   }
     
 }
@@ -134,8 +100,11 @@ function incrementWrongScore() {
 }
 
 function scoreCount (incrementScore, incrementWrongScore) {
-  var userScore = incrementScore.value + incrementWrongScore.value;
+  let currentScore = parseInt(userScore);
+  userScore = ++currentScore;
+  console.log(userScore)
 }
+
 
 function gameOver(){
   const gameOverScreen = document.getElementById('welcome', 'threeCups', 'selectionArea', 'submit'
@@ -146,7 +115,6 @@ function gameOver(){
   submit.classList.add('hidden');
   scoreArea.classList.add('hidden');
   endGame.classList.remove('hidden')
-
 }
 
 // reset-game/ choices function
