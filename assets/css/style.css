@@ -105,7 +105,7 @@ button{
     padding: 10px;
 }
 
-.Btn:hover,#btn-Submit:hover{
+.Btn:hover,#btn-Submit:hover, #homeBtn:hover{
     background-color: red;
     font: bolder;
     color: white;
@@ -124,3 +124,14 @@ button{
     background-color: black;
     border: none;
 }
+
+#keepGoing{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding-top: 25px;
+}
+
+
+ 

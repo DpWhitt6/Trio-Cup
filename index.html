@@ -18,6 +18,7 @@
 
     <!--Main Content-->
     <main>
+        <!--Welcome Page-->
         <div id="header">
             <h1 class="neonText"><strong>Trio Cup</strong></h1>
         </div>
@@ -27,6 +28,7 @@
             <p> Please enter your details below: </p> 
         </div>
         <div>
+            <!--Log in form-->
             <form id="login-form" method="" action="">
                 <div class="firstName">
                   <label for="first-name">First Name</label>
@@ -40,7 +42,7 @@
                   <label for="username">Username</label>
                   <input type="text" name="username" id="username" class="text-input" required>
                 </div>
-                
+                <!--Game play choice-->
                 <div class="radioBtn">
                     <h4>Game type : </h4>
                     <input type="radio" id="bestOfThree" data-type="bestOfThree" name="bestOf" value="3" class="radio" required>
@@ -56,8 +58,8 @@
             </form>
         </div>
     </section>
-
-       <section id="threeCups" class="hidden"> <!--class="hidden"-->
+    <!--Game-->
+       <section id="threeCups" class="hidden"> 
             <div id="cup-one" class="cups">
                 <img src="assets/Images/Red-Cup-Photo3-removebg-preview.png" alt="red cup">
             </div>
@@ -68,10 +70,10 @@
             <div id="cup-three" class="cups">
                 <img src="assets/Images/Red-Cup-Photo3-removebg-preview.png" alt="red cup">
             </div>
-
     </section>
 
-    <section id="selectionArea" class="hidden"> <!--class="hidden"-->
+    <!--Game play selector buttons-->
+    <section id="selectionArea" class="hidden"> 
         <div class="buttonPickMe">  
             <button data-type="cupChoice" id="btn-one" class="Btn" value="0"> Cup 1</button>
         </div>
@@ -84,20 +86,26 @@
             <button data-type="cupChoice" id="btn-three" class="Btn" value="2"> Cup 3 </button>
         </div>
     </section>
-    <section id="submit" class="hidden"> <!--class="hidden"-->
+    <section id="submit" class="hidden"> 
             <button data-type="submitCup" id="btn-Submit"> Submit </button>
     </section>
-
-     <section id="scoreArea" class="hidden"> <!--class="hidden"-->
+    <!--Score zone-->
+     <section id="scoreArea" class="hidden"> 
         <p class="scores" > WINS <span id="score"> 0</span></p>
         <p class="scores" > LOSSES <span id="incorrect"> 0</span></p>
      </section>
 
+     <!--Gameover-->
     <section id="endGame" class="hidden">
         <h3>Game Over</h3>
         <p>Thanks for playing!</p>
     </section>
-
+    
+    <!--Continue options-->
+    <div id="keepGoing">
+        <button data-type="home" id="homeBtn" class="hidden playOn">Home</button> 
+    </div>
+    
     </main>
 
     <script src="assets/js/script.js"></script>

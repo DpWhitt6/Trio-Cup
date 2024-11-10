@@ -6,6 +6,7 @@ var userScore = 0;
 var gameChoice = 0;
 
 
+//Welcome Page and game play buttons
 document.addEventListener('DOMContentLoaded',function() {
     let buttons = document.getElementsByTagName('button');
 
@@ -13,13 +14,9 @@ document.addEventListener('DOMContentLoaded',function() {
         button.addEventListener('click', function(){
          if (this.getAttribute('type')=== 'submitWelcome') {
             handleSubmit();
-            /**
-             * Game length options best of 5,10 or unlimited - If 5 games player then hide all code except game over
-             * add reset option to gameover - two choices reset game (back to 5/10/unlimited) or welcome page  
-             */
           } else if (this.getAttribute('data-type') === 'submitCup') {
                 alert ('You Clicked Submit!');
-                runGame()
+                runGame();
             } else if (this.getAttribute('data-type')==='cupChoice'){
               userChoice = button.value;
           } 
@@ -27,6 +24,7 @@ document.addEventListener('DOMContentLoaded',function() {
   }
 })
 
+//Number of games 
 document.addEventListener('DOMContentLoaded',function(){
   let radios = this.getElementsByClassName('radio');
 
@@ -34,14 +32,36 @@ document.addEventListener('DOMContentLoaded',function(){
     radio.addEventListener('click', function() {
       if (this.getAttribute('data-type') === 'bestOfThree' ) {
       gameChoice = 3;
-      console.log(gameChoice);
     } else if(this.getAttribute('data-type') === 'bestOfFive') {
       gameChoice = 5;
-      console.log(gameChoice);
     }else if(this.getAttribute('data-type') === 'bestOfHundred') {
       gameChoice = 100;
-      console.log(gameChoice);
     }
+    })
+  }
+})
+
+//Reset/restart event listeners
+document.addEventListener('DOMContentLoaded',function(){
+  let reset =this.getElementsByClassName('playOn');
+
+  for (playOn of reset){
+    playOn.addEventListener('click', function(){
+     if (this.getAttribute('data-type')=== 'home'){
+      const home = document.getElementById('welcome', 'threeCups', 'selectionArea', 'submit'
+        , 'scoreArea', 'keepGoing');
+        welcome.classList.remove('hidden');
+        threeCups.classList.add('hidden');
+        selectionArea.classList.add('hidden');
+        submit.classList.add('hidden');
+        scoreArea.classList.add('hidden');
+        endGame.classList.add('hidden');
+        homeBtn.classList.add('hidden');
+        var ele = document.getElementsByName("bestOf");
+          for(var i=0;i<ele.length;i++)
+           ele[i].checked = false;
+      }
+      
     })
   }
 })
@@ -67,17 +87,10 @@ function openGame () {
   scoreArea.classList.remove('hidden');
 }
 
-// Number of games requested - else functionincorrect to be ammended 07/11/24
-
-
 /**
  * The main game "loop", called when the script is first loaded
  * and after the user's answer has been processed
  */
-
-/** User Choice variable needed */
-
-//Functions
 function runGame() {
 
   if (userChoice === null){
@@ -90,14 +103,12 @@ function runGame() {
 
 //choose winning cup
     let winningCup = Math.floor(Math.random()*cupNumbers.length);
-    console.log(winningCup,cupNumbers[winningCup]); 
+    //console.log(winningCup,cupNumbers[winningCup]); 
     compareNumber(winningCup)
 } 
 
-
+//Winning cup 
 function compareNumber(winningCup) {
-  console.log('userChoice', typeof userChoice);
-  console.log('winningCup', typeof winningCup);
   if (userChoice == winningCup) {
     incrementScore();
     alert('You Won')
@@ -110,6 +121,7 @@ function compareNumber(winningCup) {
     
 }
 
+//Score
 function incrementScore() {
     let oldScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++oldScore;
@@ -128,22 +140,15 @@ function scoreCount (incrementScore, incrementWrongScore) {
   };
 }
 
-
+//GameOver
 function gameOver(){
   const gameOverScreen = document.getElementById('welcome', 'threeCups', 'selectionArea', 'submit'
-  , 'scoreArea');
+  , 'scoreArea', 'keepGoing');
   welcome.classList.add('hidden');
   threeCups.classList.add('hidden');
   selectionArea.classList.add('hidden');
   submit.classList.add('hidden');
   scoreArea.classList.add('hidden');
-  endGame.classList.remove('hidden')
+  endGame.classList.remove('hidden');
+  homeBtn.classList.remove('hidden');
 }
-
-// reset-game/ choices function
-
-/**
- * Add reset game function 
- * Add reset choice function (after every submit users choice becomes null again)
- * All screens to be apart of a singular HTML file 
- */
