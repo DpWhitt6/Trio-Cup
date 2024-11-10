@@ -2,6 +2,7 @@
 // Get the button elements and add event listeners to them
 
 var userChoice = null;
+var userScore = 0;
 
 document.addEventListener('DOMContentLoaded',function() {
     let buttons = document.getElementsByTagName('button');
@@ -65,7 +66,7 @@ function gameType (){
 
 function playGameType3(gameType){
   if (gameType === '3') {
-    for (let i = 3; i < (incrementScore.length + incrementWrongScore); i++) {
+    if (let i = 3; i < userScore ; i++) {
       gameOver()
     }
   }
@@ -130,6 +131,10 @@ function incrementScore() {
 function incrementWrongScore() {
   let oldScore = parseInt(document.getElementById("incorrect").innerText);
   document.getElementById("incorrect").innerText = ++oldScore;
+}
+
+function scoreCount (incrementScore, incrementWrongScore) {
+  var userScore = incrementScore.value + incrementWrongScore.value;
 }
 
 function gameOver(){
