@@ -3,6 +3,8 @@
 
 var userChoice = null;
 var userScore = 0;
+var gameChoice = 0;
+
 
 document.addEventListener('DOMContentLoaded',function() {
     let buttons = document.getElementsByTagName('button');
@@ -25,6 +27,25 @@ document.addEventListener('DOMContentLoaded',function() {
   }
 })
 
+document.addEventListener('DOMContentLoaded',function(){
+  let radios = this.getElementsByClassName('radio');
+
+  for (let radio of radios) {
+    radio.addEventListener('click', function() {
+      if (this.getAttribute('data-type') === 'bestOfThree' ) {
+      gameChoice = 3;
+      console.log(gameChoice);
+    } else if(this.getAttribute('data-type') === 'bestOfFive') {
+      gameChoice = 5;
+      console.log(gameChoice);
+    }else if(this.getAttribute('data-type') === 'bestOfHundred') {
+      gameChoice = 100;
+      console.log(gameChoice);
+    }
+    })
+  }
+})
+
 let form = document.getElementById('login-form');
 form.addEventListener('submit', handleSubmit); 
 
@@ -44,7 +65,6 @@ function openGame () {
   selectionArea.classList.remove('hidden');
   submit.classList.remove('hidden');
   scoreArea.classList.remove('hidden');
-  bestOf();
 }
 
 // Number of games requested - else functionincorrect to be ammended 07/11/24
@@ -102,14 +122,10 @@ function incrementWrongScore() {
 
 function scoreCount (incrementScore, incrementWrongScore) {
   let currentScore = parseInt(userScore);
-  userScore = ++currentScore;
-  console.log(userScore);
-}
-
-function bestOf (){
-    if(document.getElementById(bestOfThree).checked){
-      
-    }
+  currentScore = userScore = ++currentScore;
+  if (currentScore === gameChoice){
+    gameOver()
+  };
 }
 
 
@@ -130,5 +146,4 @@ function gameOver(){
  * Add reset game function 
  * Add reset choice function (after every submit users choice becomes null again)
  * All screens to be apart of a singular HTML file 
- * Add game over screen
  */
