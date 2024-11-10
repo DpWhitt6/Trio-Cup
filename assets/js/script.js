@@ -44,6 +44,7 @@ function openGame () {
   selectionArea.classList.remove('hidden');
   submit.classList.remove('hidden');
   scoreArea.classList.remove('hidden');
+  bestOf();
 }
 
 // Number of games requested - else functionincorrect to be ammended 07/11/24
@@ -102,7 +103,13 @@ function incrementWrongScore() {
 function scoreCount (incrementScore, incrementWrongScore) {
   let currentScore = parseInt(userScore);
   userScore = ++currentScore;
-  console.log(userScore)
+  console.log(userScore);
+}
+
+function bestOf (){
+    if(document.getElementById(bestOfThree).checked){
+      
+    }
 }
 
 
