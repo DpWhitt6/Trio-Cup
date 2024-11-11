@@ -133,5 +133,11 @@ button{
     padding-top: 25px;
 }
 
-
+/*media query: smaller phones (575px and down)*/
+@media screen and (max-width: 575px) {
  
+    h1{
+        font-size: 150px;
+    }
+ 
+}
