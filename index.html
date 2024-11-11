@@ -31,14 +31,14 @@
             </div>
             <div>
                 <!--Log in form-->
-                <form id="login-form" method="" action="">
+                <form id="login-form" method="post" action="/login/">
                     <div class="firstName">
                         <label for="first-name">First Name</label>
-                        <input type="text" name="first-name" id="firstName" class="text-input" required>
+                        <input type="text" name="first-name" id="first-name" class="text-input" required>
                     </div>
                     <div class="lastName">
                         <label for="last-name">Last Name</label>
-                        <input type="text" name="last-name" id="lastName" class="text-input" required>
+                        <input type="text" name="last-name" id="last-name" class="text-input" required>
                     </div>
                     <div class="username">
                         <label for="username">Username</label>
@@ -59,13 +59,14 @@
                             class="radio" required>
                         <label for="bestOfHundred"> 100 </label>
                     </div>
-                    <button type="submit" id="btn-Submit"> Submit</button>
+                    <button type="submit" class="btn-Submit"> Submit</button>
                 </form>
             </div>
         </section>
         <!--Game-->
         <div id="gameScreen">
             <section id="threeCups">
+                <h3 class="hidden">hiddden</h3>
                 <div id="cup-one" class="cups">
                     <img src="assets/images/redcupphoto.png" alt="red cup">
                 </div>
@@ -80,6 +81,7 @@
 
             <!--Game play selector buttons-->
             <section id="selectionArea">
+                <h3 class="hidden">hiddden</h3>
                 <div class="buttonPickMe">
                     <button data-type="cupChoice" id="btn-one" class="Btn" value="1"> Cup 1</button>
                 </div>
@@ -93,10 +95,12 @@
                 </div>
             </section>
             <section id="submit">
-                <button data-type="submitCup" id="btn-Submit"> Submit </button>
+                <h3 class="hidden">hiddden</h3>
+                <button data-type="submitCup" class="btn-Submit"> Submit </button>
             </section>
             <!--Score zone-->
             <section id="scoreArea">
+                <h3 class="hidden">hiddden</h3>
                 <p class="scores"> WINS <span id="score"> 0</span></p>
                 <p class="scores"> LOSSES <span id="incorrect"> 0</span></p>
             </section>

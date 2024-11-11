@@ -21,7 +21,7 @@ body {
 }
 
 h1 {
-    color: white;
+    color: White;
     display: flex;
     justify-content: center;
     font-size: 185px;
@@ -38,7 +38,7 @@ section {
     margin-right: 10%;
     display: flex;
     flex-wrap: wrap;
-    border: solid red;
+    border: solid white;
 }
 
 .neonText {
@@ -61,19 +61,20 @@ section {
 /*Welcome Page and End of game */
 #welcome,
 #endGame {
-    background-color: white;
+    background-color: black;
     padding-bottom: 25px;
     height: 85%;
     flex-direction: column;
     align-content: center;
-    color: red;
+    color: white;
+    font-weight: bolder;
     text-align: center;
     line-height: 3;
 }
 
 /*Game plan Page*/
 #selectionArea {
-    background-color: white;
+    background-color: black;
     height: auto;
     padding-bottom: 25px;
     border-top: white;
@@ -83,21 +84,21 @@ section {
 }
 
 #submit {
-    background-color: white;
+    background-color: black;
     height: auto;
     padding-top: 15px;
     padding-bottom: 25px;
-    border-top: white;
+    border-top: black;
     flex-direction: row;
     justify-content: space-around;
 }
 
 #threeCups {
-    background-color: white;
+    background-color: black;
     padding-top: 60px;
     padding-bottom: 25px;
     height: 85%;
-    border-bottom: white;
+    border-bottom: black;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -112,11 +113,11 @@ button {
 }
 
 .Btn:hover,
-#btn-Submit:hover,
+.btn-Submit:hover,
 #homeBtn:hover {
-    background-color: red;
+    background-color: white;
     font: bolder;
-    color: white;
+    color: black;
 }
 
 /*Focus not working 07/11/24*/
