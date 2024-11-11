@@ -1,12 +1,11 @@
-// Wait for the DOM to finish loading before running the game
-// Get the button elements and add event listeners to them
-
+//variables
 var userChoice = null;
 var gamesPlayed = 0;
 var gameChoice = 0;
 var correctGuess = 0;
 var incorrectGuess = 0;
 
+//Constants
 const welcomePage = document.getElementById('welcome');
 welcomePage.classList.remove('hidden');
 const gamePlayPage = document.getElementById('gameScreen');
@@ -124,15 +123,11 @@ function compareNumber(winningCup) {
     alert('Oh no, better luck next time!');
     incrementWrongScore();
   }
-  //scoreCount();
 }
 
 //Score
 function incrementScore() {
   document.getElementById("score").innerText = ++correctGuess;
-
-
-
 }
 
 function incrementWrongScore() {
