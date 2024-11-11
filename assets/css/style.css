@@ -20,7 +20,7 @@ body {
     padding-bottom: 25px;
 }
 
-h1{
+h1 {
     color: white;
     display: flex;
     justify-content: center;
@@ -28,11 +28,12 @@ h1{
     flex-wrap: wrap;
 }
 
-h2, h3{
+h2,
+h3 {
     font-size: 50px;
 }
 
-section{
+section {
     margin-left: 10%;
     margin-right: 10%;
     display: flex;
@@ -43,22 +44,23 @@ section{
 .neonText {
     color: white;
     text-shadow:
-      0 0 7px #fd6565,
-      0 0 10px #fd6565,
-      0 0 21px #fd6565,
-      0 0 42px rgb(190, 93, 101),
-      0 0 82px rgb(190, 93, 101),
-      0 0 92px rgb(190, 93, 101),
-      0 0 102px rgb(190, 93, 101),
-      0 0 151px rgb(190, 93, 101);
-  }
+        0 0 7px #fd6565,
+        0 0 10px #fd6565,
+        0 0 21px #fd6565,
+        0 0 42px rgb(190, 93, 101),
+        0 0 82px rgb(190, 93, 101),
+        0 0 92px rgb(190, 93, 101),
+        0 0 102px rgb(190, 93, 101),
+        0 0 151px rgb(190, 93, 101);
+}
 
 .hidden {
-    display:none;
+    display: none;
 }
 
 /*Welcome Page and End of game */
-#welcome, #endGame{
+#welcome,
+#endGame {
     background-color: white;
     padding-bottom: 25px;
     height: 85%;
@@ -70,7 +72,7 @@ section{
 }
 
 /*Game plan Page*/
-#selectionArea{
+#selectionArea {
     background-color: white;
     height: auto;
     padding-bottom: 25px;
@@ -80,7 +82,7 @@ section{
     justify-content: space-around;
 }
 
-#submit{
+#submit {
     background-color: white;
     height: auto;
     padding-top: 15px;
@@ -100,24 +102,31 @@ section{
     justify-content: space-around;
 }
 
-button{
+.screenOver {
+    border: black;
+}
+
+button {
     position: relative;
     padding: 10px;
 }
 
-.Btn:hover,#btn-Submit:hover, #homeBtn:hover{
-    background-color: red;
-    font: bolder;
-    color: white;
-}
- /*Focus not working 07/11/24*/
-.Btn:focus{
+.Btn:hover,
+#btn-Submit:hover,
+#homeBtn:hover {
     background-color: red;
     font: bolder;
     color: white;
 }
 
-#scoreArea{
+/*Focus not working 07/11/24*/
+.Btn:focus {
+    background-color: red;
+    font: bolder;
+    color: white;
+}
+
+#scoreArea {
     justify-content: space-around;
     padding-top: 10px;
     color: #fd6565;
@@ -125,7 +134,7 @@ button{
     border: none;
 }
 
-#keepGoing{
+#keepGoing {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -133,11 +142,16 @@ button{
     padding-top: 25px;
 }
 
+#homeBtn {
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
 /*media query: smaller phones (575px and down)*/
 @media screen and (max-width: 575px) {
- 
-    h1{
+
+    h1 {
         font-size: 150px;
     }
- 
+
 }
