@@ -1,7 +1,13 @@
 # Trio Cup
 This is an interative spin on the classic street game of pick a cup. 
 
-Insert AM I Responsive 
+![Am I responsive - welcome](https://github.com/user-attachments/assets/202fdfae-a8c1-4f5b-ae57-a03c2c2b966e)
+
+![Am I responsive - gameplay](https://github.com/user-attachments/assets/82768544-af54-4b47-8bbb-3be08a28ae71)
+
+![Am I responsive - gameover](https://github.com/user-attachments/assets/83e4684d-480d-4163-8c5e-7bd1f81a917e)
+
+
 
 ## Contents
 * [User Experience](#user-experience-ux)
@@ -39,27 +45,47 @@ Insert AM I Responsive
 ## User Experience (UX)
 
 ### User:
-
-#### Key Information:
+This game is desgined to be acheiveable for all with no prior experience or complicated gamepaly controls. This game would attract people looking for a simple and quick game of odds. 
 
 #### User Stories:
 
 ##### Client goals:
+* To enable people to experinece the challenge of the classic street game from where ever they are.
 
 ##### First Time Vistors:
-
+* Simple follow along layout navigates the user seemlessly through the game without any diversion.
+* Once the game recents the user will be able to ignore the 'sign up' form and go staright to the game play choices accelerating the users ability to jump straight into another game. 
 ---
 ## Design:
 
 ### Color Scheme:
+![Color palette](https://github.com/user-attachments/assets/a2e9033e-3f7c-47f8-bcca-d434820128df)
+The colours chosen have been selected to ingnite a sense of familiarity of a retro game and also the beloved classic red plastic cup. 
 
 ### Typography:
+![Cambay](https://github.com/user-attachments/assets/236a468e-dc9e-451d-9ee9-4dcbdfefd31a)
+
+A basic classic text style was chosen in keeping with the simplistic qualities aimed for throughout the websites depolyment. 
 
 ### Imagery:
+Image of the red cup was taken from google images :
+https://images.app.goo.gl/LmyXzbn4mWroqvLG8
 
 ### Wireframes:
+![Wireframe](https://github.com/user-attachments/assets/db8ae124-d277-4f63-82ca-44b0a12a79aa)
 
 ### Features:
+|Features||
+|--|--|
+|Header - Neon Sign styled header. Lightening up the page to prevent the overall dark experience.|![Neon sign title](https://github.com/user-attachments/assets/f5898d8b-9430-454e-982f-480a63262199)|
+|Welcome Page - Login form.|![Welcome login form ](https://github.com/user-attachments/assets/2182b576-54cf-49fa-aa8f-e887b0ff378c)|
+|Alerts upon submittal with acknowledgement of Username|![Sign in Alerts](https://github.com/user-attachments/assets/20295468-e9dd-413a-8d42-879a67cde996)|
+|Cup selection visible response|![Cup selection button highlighting](https://github.com/user-attachments/assets/e6d4d8b1-5fee-411d-9f69-10a348c022a6)![Gameplay ](https://github.com/user-attachments/assets/6666d667-7af0-4a2d-97a2-6bf53bb2c16f)|
+|Alerts - Submitted button and Won or loss response from cup selection|![Alert - button submitted](https://github.com/user-attachments/assets/da060374-08e8-4010-b834-75741e282511)!![Won alert ](https://github.com/user-attachments/assets/371c4e0f-9998-4a42-ba04-9fbc30e97d5c)![loss alert ](https://github.com/user-attachments/assets/ce740d86-cd81-4aa3-a799-aa8314e9b56c)|
+|Automatic Score updating|![Score zone](https://github.com/user-attachments/assets/2e71ff2f-1c6a-46a5-aade-5c6b1cec41d5)|
+|Game over screen|![Game over ](https://github.com/user-attachments/assets/90940dac-b680-438a-9c71-b66446483fd2)|
+|Reset button to enable repeat games|![Home reset button](https://github.com/user-attachments/assets/26363f8f-7e6c-42c9-8f5d-4e0901c3139a)|
+
 
 ### Accessibility:
 Ensuring contrast between the background colors to encourage an easy read website was one of the most important elements to be implemented throughout this website. A clear use of semantic HTML thorughout and active indicators in the naviagtion will allow screen readers to easily navigate the site. 
@@ -68,7 +94,7 @@ Ensuring contrast between the background colors to encourage an easy read websit
 ## Technologies Used:
 
 ### Languages Used:
-HTML and CSS.
+Javascript, HTML and CSS.
 
 ### Frameworks, Libraries & Programs used: 
 
@@ -83,21 +109,35 @@ HTML and CSS.
 * Am I Responsive? To show the website image on a range of devices.
 * Cloud convert - to reduce image size and change to AVIF format.
 
+## Deployment & Local Development
 
-  ## Local Development:
+### Deployment:
+The site is deployed using GitHub Pages. Visit the deployed site [Trio Cup](https://dpwhitt6.github.io/Trio-Cup/) To deploy using GitHub pages:
+
+1. Login or Sign Up to GitHub.
+2. Open the project repository.
+3. Click on "Settings" on the navigation bar under the repository title.
+4. Click on "Pages" in the left hand navigation panel.
+5. Under "Source", choose which branch to deploy. This should be Main for newer repositories (older repositories may still use Master).
+6. Choose which folder to deploy from, usually "/root".
+7. Click "Save", then wait for it to be deployed. It can take some time for the page to be fully deployed.
+8. Your URL will be displayed above "Source".
+
+
+## Local Development:
 
 ### How to Fork
 To fork the repository:
 
 Log in (or sign up) to Github.
-Go to the repository for this project, [White-Box-Mechanical](https://github.com/DpWhitt6/White-Box-Mechanical).
+Go to the repository for this project, [Trio Cup](https://github.com/DpWhitt6/Trio-Cup).
 Click the Fork button in the top right corner.
 
 ### How to Clone
 To clone the repository:
 
 Log in (or sign up) to GitHub.
-Go to the repository for this project, [White-Box-Mechanical](https://github.com/DpWhitt6/White-Box-Mechanical).
+Go to the repository for this project, [Trio Cup](https://github.com/DpWhitt6/Trio-Cup).
 Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
@@ -115,12 +155,22 @@ Type 'git clone' into the terminal and then paste the link you copied in step 3.
 |Ecosia| No issues found|
 
 ### Vaildation Test:
+|Vaildation testing||
+|--|--|
+|HTML Validator|![HTML Validator](https://github.com/user-attachments/assets/f3989a2d-1a18-4579-830c-4505d676df4d)|
+|CSS Validator|![CSS Validator ](https://github.com/user-attachments/assets/331044f8-cade-4579-bce7-069d2ae0b613)|
 
 ### Auditing:
+|Auditing||
+|--|--|
+|Mobile|![Lighthouse Mobile](https://github.com/user-attachments/assets/c54f708b-4f2c-4b8b-9afb-6abfe800f373)|
+|Desktop|![Lighthouse desktop](https://github.com/user-attachments/assets/c0cec4c7-199f-40ba-af73-d570fe68fefe)|
 
 ### Bugs:
 |BUGS| Solution|
 |--|--|
+|Sections used instead of Divs - Hidden headers used to remove error codes|![HTML Sections headers added](https://github.com/user-attachments/assets/7cba64e2-63f9-49ba-8d35-fbcdcf56acdb)|
+|Constants used incorrectly and |[const used incorrectly ](https://github.com/user-attachments/assets/cc9573fa-c74b-471e-b3dd-57ab38ae7201)![Correct useage of const](https://github.com/user-attachments/assets/be45fbcc-a7f5-479e-87a8-4c011a24c134)!|
 
 ---
 
@@ -128,9 +178,13 @@ Type 'git clone' into the terminal and then paste the link you copied in step 3.
 ### Content
 |Content | Credit |
 |--|--|
+|Score Automated code|Love Maths Walk through|
+|Read me|[Kera-Cudmore](https://github.com/kera-cudmore/readme-examples)|
+|Neon Styling|[CSS Tricks](https://css-tricks.com/how-to-create-neon-text-with-css/)|
 
 ### Media
 |Images| Source|
 |--|--|
+|Red Cups|https://images.app.goo.gl/LmyXzbn4mWroqvLG8|
 
 ---
