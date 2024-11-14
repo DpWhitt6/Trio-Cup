@@ -13,29 +13,32 @@ gamePlayPage.classList.add('hidden');
 const gameOverPage = document.getElementById('gameOverScreen');
 gameOverPage.classList.add('hidden');
 
-
 //Welcome Page and game play buttons
 document.addEventListener('DOMContentLoaded', function () {
   let buttons = document.getElementsByTagName('button');
-
+/** 
+ * Submit button controls to move to gameplay page
+ * Cup choice - selecting the cup 
+ * Submit cup - confirmation of cup choice
+*/
   for (let button of buttons) {
     button.addEventListener('click', function () {
       if (this.getAttribute('type') === 'submitWelcome') {
         handleSubmit();
       } else if (this.getAttribute('data-type') === 'submitCup') {
-        alert('You Clicked Submit!');
         runGame();
       } else if (this.getAttribute('data-type') === 'cupChoice') {
         userChoice = button.value;
       }
-    })
+    });
   }
-})
+});
 
 //Number of games 
 document.addEventListener('DOMContentLoaded', function () {
   let radios = this.getElementsByClassName('radio');
 
+  // Game play length choices.
   for (let radio of radios) {
     radio.addEventListener('click', function () {
       if (this.getAttribute('data-type') === 'bestOfThree') {
@@ -45,15 +48,16 @@ document.addEventListener('DOMContentLoaded', function () {
       } else if (this.getAttribute('data-type') === 'bestOfHundred') {
         gameChoice = 100;
       }
-    })
+    });
   }
-})
+});
 
 //Reset/restart event listeners
 document.addEventListener('DOMContentLoaded', function () {
   let reset = this.getElementsByClassName('playOn');
 
-  for (playOn of reset) {
+  // Reset button
+  for (var playOn of reset) {
     playOn.addEventListener('click', function () {
       if (this.getAttribute('data-type') === 'home') {
         welcomePage.classList.remove('hidden');
@@ -64,11 +68,9 @@ document.addEventListener('DOMContentLoaded', function () {
           ele[i].checked = false;
 
       }
-    })
+    });
   }
-})
-
-
+});
 
 let form = document.getElementById('login-form');
 form.addEventListener('submit', handleSubmit);
@@ -81,6 +83,7 @@ function handleSubmit(event) {
   openGame();
 }
 
+//Open Game play page
 function openGame() {
   welcomePage.classList.add('hidden');
   gamePlayPage.classList.remove('hidden');
@@ -94,7 +97,7 @@ function openGame() {
 function runGame() {
 
   if (userChoice === null) {
-    alert('No cup selected, please select a cup!')
+    alert('No cup selected, please select a cup!');
     return;
   }
 
@@ -104,10 +107,15 @@ function runGame() {
   //choose winning cup
   let winningCup = Math.floor(Math.random() * cupNumbers.length);
 
+  /**
+   * Total games played vs the game play choosen 
+   * If game plan is less tahn game play user choice can still
+   * be used.
+   */
   if (gamesPlayed < gameChoice && userChoice) {
     compareNumber(winningCup);
     userChoice = null;
-    gamesPlayed++
+    gamesPlayed++;
   }
   if (gamesPlayed === gameChoice) {
     gameOver();
@@ -139,9 +147,12 @@ function gameOver() {
   welcomePage.classList.add('hidden');
   gamePlayPage.classList.add('hidden');
   gameOverPage.classList.remove('hidden');
+  let username = document.getElementById('username').value;
+  document.getElementById('thanks').innerHTML=(`${username}! Thanks for playing!`);
   resetScores();
 }
 
+//Reset scores to 0
 function resetScores() {
   userChoice = null;
   correctGuess = 0;

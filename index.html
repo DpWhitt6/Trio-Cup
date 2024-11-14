@@ -3,7 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags for search engines -->
+    <meta name="description"
+        content="Trio Cup, Three cup game, Classic street games,Cup game, Ball under cup, Pick a cup">
+    <meta name="keywords" content="Cup, Red cups,Three, Street-games">
     <!--Title-->
     <title>Trio Cups</title>
     <!-- Favicon -->
@@ -27,11 +32,21 @@
         <section id="welcome">
             <div>
                 <h2><strong>Welcome!</strong></h2>
+                <h3><strong>Instructions:</strong></h3>
+                <p>Please follow the below instructions to start the game:</p>
+                <ul>
+                    <li>Fill the below form</li>
+                    <li>Click Sumbit</li>
+                    <li>Select a cup</li>
+                    <li>Click Sumbit</li>
+                    <li>Repeat the process until your at Game over.</li>
+                    <li>To play again please hit home and select the game play you would like to play.</li>
+                </ul>
                 <p> Please enter your details below: </p>
             </div>
             <div>
                 <!--Log in form-->
-                <form id="login-form" method="post" action="/login/">
+                <form id="login-form">
                     <div class="firstName">
                         <label for="first-name">First Name</label>
                         <input type="text" name="first-name" id="first-name" class="text-input" required>
@@ -66,7 +81,7 @@
         <!--Game-->
         <div id="gameScreen">
             <section id="threeCups">
-                <h3 class="hidden">hiddden</h3>
+                <h3 class="hidden">hidden</h3>
                 <div id="cup-one" class="cups">
                     <img src="assets/images/redcupphoto.png" alt="red cup">
                 </div>
@@ -81,7 +96,7 @@
 
             <!--Game play selector buttons-->
             <section id="selectionArea">
-                <h3 class="hidden">hiddden</h3>
+                <h3 class="hidden">hidden</h3>
                 <div class="buttonPickMe">
                     <button data-type="cupChoice" id="btn-one" class="Btn" value="1"> Cup 1</button>
                 </div>
@@ -95,12 +110,12 @@
                 </div>
             </section>
             <section id="submit">
-                <h3 class="hidden">hiddden</h3>
+                <h3 class="hidden">hidden</h3>
                 <button data-type="submitCup" class="btn-Submit"> Submit </button>
             </section>
             <!--Score zone-->
             <section id="scoreArea">
-                <h3 class="hidden">hiddden</h3>
+                <h3 class="hidden">hidden</h3>
                 <p class="scores"> WINS <span id="score"> 0</span></p>
                 <p class="scores"> LOSSES <span id="incorrect"> 0</span></p>
             </section>
@@ -110,7 +125,7 @@
         <div id="gameOverScreen" class="screenOver">
             <section id="endGame">
                 <h3>Game Over</h3>
-                <p>Thanks for playing!</p>
+                <p id="thanks">Thanks for playing!</p>
             </section>
 
             <!--Continue options-->
