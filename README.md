@@ -170,7 +170,6 @@ Type 'git clone' into the terminal and then paste the link you copied in step 3.
 |BUGS| Solution|
 |--|--|
 |Sections used instead of Divs - Hidden headers used to remove error codes|![HTML Sections headers added](https://github.com/user-attachments/assets/7cba64e2-63f9-49ba-8d35-fbcdcf56acdb)|
-|Constants used incorrectly and |[const used incorrectly ](https://github.com/user-attachments/assets/cc9573fa-c74b-471e-b3dd-57ab38ae7201)![Correct useage of const](https://github.com/user-attachments/assets/be45fbcc-a7f5-479e-87a8-4c011a24c134)!|
 
 ---
 
