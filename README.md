@@ -159,12 +159,13 @@ Type 'git clone' into the terminal and then paste the link you copied in step 3.
 |--|--|
 |HTML Validator|![HTML Validator](https://github.com/user-attachments/assets/f3989a2d-1a18-4579-830c-4505d676df4d)|
 |CSS Validator|![CSS Validator ](https://github.com/user-attachments/assets/331044f8-cade-4579-bce7-069d2ae0b613)|
+|JavaScript|![JavaScript Validator ](https://github.com/user-attachments/assets/779b6b11-2e0e-45a8-80a7-c8aefb845e07)|
 
 ### Auditing:
 |Auditing||
 |--|--|
-|Mobile|![Lighthouse Mobile](https://github.com/user-attachments/assets/c54f708b-4f2c-4b8b-9afb-6abfe800f373)|
-|Desktop|![Lighthouse desktop](https://github.com/user-attachments/assets/c0cec4c7-199f-40ba-af73-d570fe68fefe)|
+|Mobile|![Lighthouse Mobile](https://github.com/user-attachments/assets/4558b5a9-0b7b-4d8e-b3ba-a4385b31e3cc)|
+|Desktop|![Lighthouse desktop](https://github.com/user-attachments/assets/1c7cf3b0-2ae0-4f76-b6b2-d702c1cd92e5)|
 
 ### Bugs:
 |BUGS| Solution|
